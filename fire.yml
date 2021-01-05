@@ -1,0 +1,14 @@
+--- #Firewalld Configurations
+- hosts: demo
+  user: root
+  become: yes
+  connection: ssh
+  tasks:
+        - firewalld:
+                   port: 80/tcp
+                   permanent: true
+                   state: enabled
+        - firewalld:
+                   port: 3306/tcp
+                   permanent: true
+                   state: enabled
