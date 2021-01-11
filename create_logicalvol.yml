@@ -1,0 +1,9 @@
+---
+- hosts: demo
+  tasks:
+        - name: Create a logical volume
+          lvol:
+                vg: vg_sql
+                lv: lv_data
+                size: 500M
+              
